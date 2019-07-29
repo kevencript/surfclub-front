@@ -1,0 +1,292 @@
+/* Fundo */
+html,
+body {
+  background: url(../img/raios-top.png) no-repeat;
+}
+
+#navbar-horizontal {
+  display: none;
+}
+
+#area-chamados {
+  width: 100%;
+  height: auto;
+}
+
+#coluna {
+  background: #1d498a;
+  width: 300px;
+  height: 100%;
+  text-transform: uppercase;
+  padding-bottom: 65px;
+}
+
+/* Tipografia */
+div {
+  text-transform: uppercase;
+}
+
+.negrito {
+  font-weight: 900;
+}
+
+.laranja {
+  color: #ff522c;
+}
+
+.azul-claro {
+  color: #edf4fd;
+}
+
+.azul-escuro {
+  color: #1d498a;
+}
+
+.font16 {
+  font-size: 16pt;
+}
+
+.font30 {
+  font-size: 30pt;
+}
+
+/* Cabeçalho */
+#logo {
+  background-color: #1d498a;
+  padding: 20px 25px 10px 25px;
+}
+
+#logo img {
+  margin-top: 5px;
+  width: 100%;
+}
+
+#cabecalho {
+  padding-top: 20px;
+  text-transform: uppercase;
+  font-size: 30pt;
+}
+
+/* Menu Lateral */
+#menu-lateral {
+  background: #1d498a;
+}
+
+#titulo-menu {
+  padding: 65px 0 50px 0;
+  font-size: 26pt;
+  line-height: 1;
+}
+
+#operadora-telefone {
+  padding-bottom: 50px;
+  font-size: 12pt;
+  line-height: 1;
+}
+
+.chamados {
+  padding-bottom: 45px;
+}
+
+#formulario {
+  width: 50%;
+}
+/* Formulário */
+.form-control {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  background: #fff;
+  border: 1px solid #ff522c;
+  color: #ff522c;
+}
+
+input[type="file"] {
+  /* Esconde o input */
+  display: none;
+}
+
+#btn-arquivo {
+  /* Aparência que terá o seletor de arquivo */
+  background-color: #ff522c;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 10px 20px 10px 0;
+}
+
+/* Botões */
+.btn-azul {
+  background: none;
+  border: 2px solid #edf4fd;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+
+.btn-azul:hover {
+  background: #ff522c;
+  color: #edf4fd;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+
+.btn-chamados {
+  width: 260px;
+  font-weight: 900;
+}
+
+.btn-laranja {
+  background: #ff522c;
+  color: #fff;
+  border-radius: 30px;
+  text-transform: uppercase;
+  width: 100px;
+}
+
+.btn-laranja:hover {
+  background: none;
+  color: #ff522c;
+  border: 1px solid #ff522c;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+
+.badge-light {
+  color: #ff522c;
+  background: #edf4fd;
+  border-radius: 50px;
+}
+
+#chamado-abrir {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#chamado-aberto {
+  margin-bottom: 20px;
+}
+
+#chamado-fechado {
+  margin-bottom: 20px;
+}
+
+#chamado-abrir img {
+  margin-right: 15px;
+}
+
+#chamado-aberto .badge-light {
+  margin-left: 10px;
+}
+
+#chamado-fechado .badge-light {
+  margin-left: 3px;
+}
+
+/* Media Queries */
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #navbar-horizontal {
+    display: inline;
+  }
+  .menu-lateral,
+  #logo2,
+  #logo,
+  #logo-img {
+    display: none;
+    background-color: transparent;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #logo img {
+    width: 160px;
+  }
+
+  .btn-chamados {
+    width: 150px;
+  }
+
+  #chamado-abrir img {
+    margin-right: 5px;
+  }
+
+  #formulario {
+    width: 80%;
+  }
+
+  #chamado-aberto img,
+  #chamado-fechado img {
+    margin-right: -9px;
+  }
+
+  #chamado-abrir,
+  #chamado-aberto,
+  #chamado-fechado {
+    font-size: 6pt;
+    padding-left: 0px;
+  }
+
+  #titulo-menu {
+    font-size: 21.5pt;
+  }
+
+  .font16 {
+    font-size: 13pt;
+  }
+
+  .font30 {
+    font-size: 25pt;
+  }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #logo img {
+    width: 200px;
+  }
+
+  #formulario {
+    width: 60%;
+  }
+
+  .btn-chamados {
+    width: 200px;
+  }
+
+  #chamado-abrir img {
+    margin-right: 5px;
+  }
+
+  #chamado-aberto img,
+  #chamado-fechado img {
+    margin-right: -9px;
+  }
+
+  #chamado-abrir,
+  #chamado-aberto,
+  #chamado-fechado {
+    font-size: 10pt;
+    padding-left: 0px;
+  }
+
+  #titulo-menu {
+    font-size: 21.5pt;
+  }
+
+  .font16 {
+    font-size: 13pt;
+  }
+
+  .font30 {
+    font-size: 25pt;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+}
