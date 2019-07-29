@@ -185,6 +185,19 @@ input[type="file"] {
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
+  #formulario {
+    width: 75%;
+  }
+  #navbar-horizontal {
+    display: inline;
+  }
+  .menu-lateral,
+  #logo2,
+  #logo,
+  #logo-img {
+    display: none;
+    background-color: transparent;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -198,6 +211,10 @@ input[type="file"] {
   #logo-img {
     display: none;
     background-color: transparent;
+  }
+
+  #formulario {
+    width: 80%;
   }
 }
 
