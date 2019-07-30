@@ -1,309 +1,131 @@
-/* Fundo */
-html,
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
 body {
-  background: url(../img/raios-top.png) no-repeat;
+  font-family: "Poppins", sans-serif;
+  background-image: url("../img/background2.svg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#navbar-horizontal {
-  display: none;
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
 }
 
-#area-chamados {
-  width: 100%;
-  height: auto;
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
-#coluna {
-  background: #1d498a;
-  width: 300px;
-  height: 100%;
-  text-transform: uppercase;
-  padding-bottom: 65px;
+#sidebar .badge {
+  margin-left: 1px;
+  padding: 2.3px 4.28px;
 }
 
-/* Tipografia */
-div {
-  text-transform: uppercase;
-}
-
-.negrito {
-  font-weight: 900;
-}
-
-.laranja {
-  color: #ff522c;
-}
-
-.azul-claro {
-  color: #edf4fd;
-}
-
-.azul-escuro {
-  color: #1d498a;
-}
-
-.font16 {
-  font-size: 16pt;
-}
-
-.font30 {
-  font-size: 30pt;
-}
-
-/* Cabeçalho */
-#logo {
-  background-color: #1d498a;
-  padding: 20px 25px 10px 25px;
-}
-
-#logo img {
-  margin-top: 5px;
-  width: 100%;
-}
-
-#cabecalho {
-  padding-top: 20px;
-  text-transform: uppercase;
-  font-size: 30pt;
-}
-
-/* Menu Lateral */
-#menu-lateral {
-  background: #1d498a;
-}
-
-#titulo-menu {
-  padding: 65px 0 50px 0;
-  font-size: 26pt;
-  line-height: 1;
-}
-
-#operadora-telefone {
-  padding-bottom: 50px;
-  font-size: 12pt;
-  line-height: 1;
-}
-
-.chamados {
-  padding-bottom: 45px;
-}
-
-#formulario {
-  width: 50%;
-}
-/* Formulário */
-.form-control {
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  background: #fff;
-  border: 1px solid #ff522c;
-  color: #ff522c;
-}
-
-input[type="file"] {
-  /* Esconde o input */
-  display: none;
-}
-
-#btn-arquivo {
-  /* Aparência que terá o seletor de arquivo */
-  background-color: #ff522c;
-  border-radius: 30px;
+#sidebar {
+  /* don't forget to add all the previously mentioned styles here too */
+  background: #3f51b5;
   color: #fff;
-  cursor: pointer;
-  margin: 0 10px 20px 10px 0;
+  transition: all 0.3s;
+}
+#sidebar .svg-icon {
+  width: 100%;
+  margin-right: 5px;
+  max-width: 35px;
 }
 
-/* Botões */
-.btn-azul {
-  background: none;
-  border: 2px solid #edf4fd;
-  border-radius: 30px;
-  text-transform: uppercase;
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #3f51b5;
 }
 
-.btn-azul:hover {
-  background: #ff522c;
-  color: #edf4fd;
-  border-radius: 30px;
-  text-transform: uppercase;
+#sidebar #logotipo {
+  width: 100%;
+  max-width: 200px;
 }
 
-.btn-chamados {
-  width: 260px;
-  font-weight: 900;
+#sidebar ul.components {
+  padding: 20px 0;
 }
 
-.btn-laranja {
-  background: #ff522c;
+#sidebar hr {
+  border: 0;
+  height: 1px;
+  margin: auto;
+  max-width: 230px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0)
+  );
+}
+#sidebar ul p {
   color: #fff;
-  border-radius: 30px;
-  text-transform: uppercase;
-  width: 100px;
+  padding: 10px;
 }
 
-.btn-laranja:hover {
-  background: none;
-  color: #ff522c;
-  border: 1px solid #ff522c;
-  border-radius: 30px;
-  text-transform: uppercase;
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  color: white;
+}
+#sidebar ul li a:hover {
+  background: #3949ab;
+  text-decoration: none;
 }
 
-.badge-light {
-  color: #ff522c;
-  background: #edf4fd;
-  border-radius: 50px;
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #3949ab;
+}
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #3949ab;
 }
 
-#chamado-abrir {
-  text-align: left;
-  margin-bottom: 20px;
+.wrapper {
+  display: flex;
+  width: 100%;
 }
 
-#chamado-aberto {
-  margin-bottom: 20px;
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  height: 100vh;
 }
 
-#chamado-fechado {
-  margin-bottom: 20px;
+#sidebar.active {
+  margin-left: -250px;
 }
 
-#chamado-abrir img {
-  margin-right: 15px;
+a[data-toggle="collapse"] {
+  position: relative;
 }
 
-#chamado-aberto .badge-light {
-  margin-left: 10px;
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
 }
 
-#chamado-fechado .badge-light {
-  margin-left: 3px;
-}
-
-/* Media Queries */
-
-/* Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {
-  #formulario {
-    width: 75%;
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
   }
-  #navbar-horizontal {
-    display: inline;
+  #sidebar.active {
+    margin-left: 0;
   }
-  .menu-lateral,
-  #logo2,
-  #logo,
-  #logo-img {
-    display: none;
-    background-color: transparent;
-  }
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  #navbar-horizontal {
-    display: inline;
-  }
-  .menu-lateral,
-  #logo2,
-  #logo,
-  #logo-img {
-    display: none;
-    background-color: transparent;
-  }
-
-  #formulario {
-    width: 80%;
-  }
-}
-
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #logo img {
-    width: 160px;
-  }
-
-  .btn-chamados {
-    width: 150px;
-  }
-
-  #chamado-abrir img {
-    margin-right: 5px;
-  }
-
-  #formulario {
-    width: 80%;
-  }
-
-  #chamado-aberto img,
-  #chamado-fechado img {
-    margin-right: -9px;
-  }
-
-  #chamado-abrir,
-  #chamado-aberto,
-  #chamado-fechado {
-    font-size: 6pt;
-    padding-left: 0px;
-  }
-
-  #titulo-menu {
-    font-size: 21.5pt;
-  }
-
-  .font16 {
-    font-size: 13pt;
-  }
-
-  .font30 {
-    font-size: 25pt;
-  }
-}
-
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  #logo img {
-    width: 200px;
-  }
-
-  #formulario {
-    width: 60%;
-  }
-
-  .btn-chamados {
-    width: 200px;
-  }
-
-  #chamado-abrir img {
-    margin-right: 5px;
-  }
-
-  #chamado-aberto img,
-  #chamado-fechado img {
-    margin-right: -9px;
-  }
-
-  #chamado-abrir,
-  #chamado-aberto,
-  #chamado-fechado {
-    font-size: 10pt;
-    padding-left: 0px;
-  }
-
-  #titulo-menu {
-    font-size: 21.5pt;
-  }
-
-  .font16 {
-    font-size: 13pt;
-  }
-
-  .font30 {
-    font-size: 25pt;
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
 }
