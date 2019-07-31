@@ -8,6 +8,7 @@ body {
   background-size: cover;
 }
 
+/* Tipografia */
 p {
   font-family: "Poppins", sans-serif;
   font-size: 1.1em;
@@ -16,6 +17,47 @@ p {
   color: #999;
 }
 
+#cabecalho {
+  text-transform: uppercase;
+  font-size: 35px;
+  color: #3f51b5;
+  text-align: right;
+  margin-right: 52px;
+  margin-top: 20px;
+}
+
+#cabecalho .chamado {
+  color: #ff522c;
+  font-weight: 500;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+#menu-title .central {
+  font-size: 20px;
+}
+
+#menu-title .servicos {
+  font-weight: 700;
+  font-size: 23px;
+}
+
+#campo-usuario .campo-operadora,
+#campo-usuario .campo-telefone {
+  text-transform: uppercase;
+  margin-left: 60px;
+  font-size: 12px;
+}
+
+#campo-usuario .operadora,
+#campo-usuario .telefone {
+  text-transform: uppercase;
+  margin-left: 60px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Links */
 a,
 a:hover,
 a:focus {
@@ -25,16 +67,29 @@ a:focus {
 }
 
 #sidebar .badge {
-  margin-left: 1px;
+  margin-left: 2px;
   padding: 2.3px 4.28px;
+  color: #ff522c;
+  font-weight: 500;
 }
 
+.sidebar-fake {
+  min-width: 277px;
+  max-width: 277px;
+  height: 100vh;
+}
+
+/* Barra de Navegação Lateral*/
 #sidebar {
-  /* don't forget to add all the previously mentioned styles here too */
   background: #3f51b5;
   color: #fff;
   transition: all 0.3s;
+  position: fixed;
+  min-width: 277px;
+  max-width: 277px;
+  height: 100vh;
 }
+
 #sidebar .svg-icon {
   width: 100%;
   margin-right: 5px;
@@ -49,6 +104,11 @@ a:focus {
 #sidebar #logotipo {
   width: 100%;
   max-width: 200px;
+  margin-left: 6px;
+}
+
+#sidebar #menu-title {
+  text-transform: uppercase;
 }
 
 #sidebar ul.components {
@@ -67,6 +127,7 @@ a:focus {
     rgba(255, 255, 255, 0)
   );
 }
+
 #sidebar ul p {
   color: #fff;
   padding: 10px;
@@ -78,6 +139,7 @@ a:focus {
   display: block;
   color: white;
 }
+
 #sidebar ul li a:hover {
   background: #3949ab;
   text-decoration: none;
@@ -88,6 +150,7 @@ a[aria-expanded="true"] {
   color: #fff;
   background: #3949ab;
 }
+
 ul ul a {
   font-size: 0.9em !important;
   padding-left: 30px !important;
@@ -99,12 +162,6 @@ ul ul a {
   width: 100%;
 }
 
-#sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  height: 100vh;
-}
-
 #sidebar.active {
   margin-left: -250px;
 }
@@ -113,19 +170,94 @@ a[data-toggle="collapse"] {
   position: relative;
 }
 
-.dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
+/* Formulário */
+#formulario select,
+#formulario input,
+#forumulario textarea {
+  border-radius: 30px;
+  outline-color: #ff522c;
+  color: #ff522c;
 }
 
-@media (max-width: 768px) {
-  #sidebar {
-    margin-left: -250px;
+#formulario label {
+  color: #3f51b5;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.it input.form-control {
+  border: none;
+  width: 100%;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: none;
+}
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+}
+
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#content {
+  width: 100%;
+}
+
+#content .btn-laranja-upload {
+  border-radius: 30px;
+  background-color: #ff522c;
+  border: none;
+  color: #fff;
+  padding: 7px 15px;
+  margin-left: -40px;
+  height: 38px;
+  width: 40px;
+}
+
+.btn-laranja {
+  border-radius: 30px;
+  background-color: #ff522c;
+  color: #fff;
+}
+
+/* Media Queries - Responsividade */
+
+@media (max-width: 575.98px) {
+  /* Extra small devices (portrait phones, less than 576px)*/
+  #sidebar,
+  .sidebar-fake {
+    display: none;
   }
-  #sidebar.active {
-    margin-left: 0;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Small devices (landscape phones, 576px and up) */
+  #sidebar,
+  .sidebar-fake {
+    display: none;
   }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Medium devices (tablets, 768px and up)*/
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Large devices (desktops, 992px and up)*/
+}
+
+@media (min-width: 1200px) {
+  /* Extra large devices (large desktops, 1200px and up)*/
 }

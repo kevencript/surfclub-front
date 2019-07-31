@@ -2,91 +2,156 @@
 <html lang="pt-br">
   <head>
     <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="css/estilo.css">
 
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous">
 
     <!-- Scrollbar Custom CSS -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
-    <title>Surf-club</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <title>SURF GROUP - Central de Serviços</title>
   </head>
+
   <body>
     <div class="wrapper">
-      <!-- Sidebar -->
+      <!-- Sidebar  -->
+      <div class="sidebar-fake"></div>
       <nav id="sidebar">
-        <div class="sidebar-header">
-          <img src="img/logos.png" id="logotipo" />
-        </div>
-        <hr />
-
-        <ul class="list-unstyled components">
-          <p class="text-center">Central de Serviços</p>
-
-          <!-- 
-          <li class="active">
-            <a
-              href="#homeSubmenu"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle"
-              >Dropdown</a
-            >
-            <ul class="collapse list-unstyled" id="homeSubmenu">
-              <li>
-                <a href="#">Teste</a>
-              </li>
-            </ul>
-          </li>
-        -->
-          <li>
-            <a href="#"
-              ><img src="img/add-chamado.svg" class="svg-icon" />Abrir
-              chamado</a
-            >
-          </li>
-
-          <li>
-            <a href="#"
-              ><img src="img/chamados.svg" class="svg-icon" />Chamados Abertos
-              <span class="badge badge-light ">9</span></a
-            >
-          </li>
-          <li>
-            <a href="#"
-              ><img src="img/remove-chamado.svg" class="svg-icon" />Chamados
-              fechados <span class="badge badge-light">9</span></a
-            >
-          </li>
-        </ul>
-      </nav>
-      <!-- Page Content -->
-      <div id="content">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <button type="button" id="sidebarCollapse" class="btn btn-info">
-              <i class="fas fa-align-left"></i>
-              <span>BUTTON</span>
-            </button>
+          <div class="sidebar-header text-center">
+            <img src="img/logos.png" id="logotipo">
           </div>
-        </nav>
+
+          <hr>
+
+          <ul class="list-unstyled components">
+              <li class="active">
+                <p class="text-center" id="menu-title"><span class="central">Central de </span><br><span class="servicos">Serviços</span></p>
+
+                <p id="campo-usuario">
+                  <span class="campo-operadora">Operadora:</span><br>
+                  <span class="operadora">ALGAR</span><br>
+                  <span class="campo-telefone">Telefone:</span><br>
+                  <span class="telefone">55 21 9 9999-9999</span><br>
+                </p>
+
+                <li>
+                  <a href="#">
+                    <img src="img/add-chamado.svg" class="svg-icon">
+                    <span>Abrir Chamado</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img src="img/chamados.svg" class="svg-icon">
+                    <span>Chamados Abertos</span> <span class="badge badge-light">750</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img src="img/remove-chamado.svg" class="svg-icon">
+                    <span>Chamados Fechados</span> <span class="badge badge-light">1770</span>
+                  </a>
+                </li>
+              </li>
+          </ul>
+
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content">
+        <section class="container">
+          <div class="row">
+            <div class="col-12" id="cabecalho">
+              Abrir <span class="chamado">Chamado</span>
+              <hr />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-9 col-lg-7 col-xl-8 mx-auto">
+              <form id="formulario">
+                
+                <div class="form-group">
+                  <label for="tipoInp" class="azul-escuro negrito">Tipo:</label>
+                  <select class="form-control" id="tipoInp">
+                  <option selected> - Escolha o tipo do chamado - </option>
+                  <option value="1">Um</option>
+                  <option value="2">Dois</option>
+                  <option value="3">Três</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="servicoInp" class="azul-escuro negrito">Serviço:</label>
+                  <select class="form-control" id="servicoInp">
+                    <option selected> - Selecione o serviço desejado - </option>
+                    <option value="1">Um</option>
+                    <option value="2">Dois</option>
+                    <option value="3">Três</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="tituloInp" class="azul-escuro negrito">Título:</label>
+                    <div>
+                      <input type="text" class="form-control" id="tituloInp">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="descricaoInp" class="azul-escuro negrito">Descrição:</label>
+                  <textarea class="form-control" id="descricaoInp" style="resize: none" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricaoInp" class="azul-escuro negrito">Anexo:</label>
+                  <div class="input-group">
+
+                    <input type="text" class="form-control" placeholder="Nenhum arquivo selecionado" disabled readonly>
+                      <div class="input-group-btn">
+                        <span class="fileUpload btn btn-laranja-upload">
+                          <span class="upl" id="upload"><i class="fas fa-file-upload"></i></span>
+                          <input type="file" class="upload up" id="up" onchange="readURL(this);">
+                        </span>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="telefoneInp" class="azul-escuro negrito">Telefone Alternativo:</label>
+                  <div>
+                    <input type="text" class="form-control" id="telefoneInp">
+                  </div>
+                </div>
+                
+                <div class="d-flex justify-content-end">
+                  <button type="submit" class="btn btn-laranja">Enviar</button>
+                </div>
+            </form>
+            </div>
+          </div>
+                    
+        </section>
       </div>
-    </div>
+  </div>
+
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
@@ -110,16 +175,6 @@
     ></script>
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $("#sidebar").mCustomScrollbar({
-          theme: "minimal"
-        });
-
-        $("#sidebarCollapse").on("click", function() {
-          $("#sidebar").toggleClass("active");
-        });
-      });
-    </script>
+    
   </body>
 </html>
