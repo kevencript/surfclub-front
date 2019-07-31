@@ -179,6 +179,18 @@ a[data-toggle="collapse"] {
   color: #ff522c;
 }
 
+img #division {
+  max-width: 10px;
+}
+
+#navbar-horizontal {
+  background-color: rgb(255, 255, 255, 0.2);
+  margin: 5px auto;
+  max-width: 98%;
+
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
 #formulario label {
   color: #3f51b5;
   text-transform: uppercase;
@@ -252,6 +264,11 @@ a[data-toggle="collapse"] {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   /* Medium devices (tablets, 768px and up)*/
+  /* Small devices (landscape phones, 576px and up) */
+  #sidebar,
+  .sidebar-fake {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
