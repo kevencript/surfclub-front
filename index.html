@@ -24,6 +24,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+    <!-- Tipografia -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
     <title>SURF GROUP - Central de Serviços</title>
   </head>
 
@@ -40,33 +43,33 @@
 
           <ul class="list-unstyled components">
               <li class="active">
-                <p class="text-center" id="menu-title"><span class="central">Central de </span><br><span class="servicos">Serviços</span></p>
+                <p id="menu-title"><span class="central">Central de </span><br><span class="servicos">Serviços</span></p>
 
                 <p id="campo-usuario">
                   <span class="campo-operadora">Operadora:</span><br>
-                  <span class="operadora">ALGAR</span><br>
+                  <span class="operadora">ALGAR</span><br><br>
                   <span class="campo-telefone">Telefone:</span><br>
                   <span class="telefone">55 21 9 9999-9999</span><br>
                 </p>
 
-                <li>
+                <li class="area-chamados">
                   <a href="#">
                     <img src="img/add-chamado.svg" class="svg-icon">
-                    <span>Abrir Chamado</span>
+                    <span id="abrir">Abrir Chamado</span>
                   </a>
                 </li>
 
-                <li>
+                <li class="area-chamados">
                   <a href="#">
                     <img src="img/chamados.svg" class="svg-icon">
-                    <span>Chamados Abertos</span> <span class="badge badge-light">750</span>
+                    <span id="aberto">Chamados Abertos</span> <span class="badge badge-light">750</span>
                   </a>
                 </li>
 
-                <li>
+                <li class="area-chamados">
                   <a href="#">
                     <img src="img/remove-chamado.svg" class="svg-icon">
-                    <span>Chamados Fechados</span> <span class="badge badge-light">1770</span>
+                    <span id="fechado">Chamados Fechados</span> <span class="badge badge-light">1770</span>
                   </a>
                 </li>
               </li>
@@ -77,34 +80,32 @@
       <!-- Page Content  -->
       <div id="content">
         <nav id="navbar-horizontal" class="navbar navbar-expand-lg navbar-light">
-       
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+          <div class="text-center" id="cabecalho">
+            <!--<img src="img/logos.png" id="logo-navhr">-->
+
+            Abrir <span class="chamado">Chamado</span>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link active" href="#" data-toggle="tooltip" data-placement="top" title="Sair">Logout <span class="sr-only">(Página atual)</span></a>
-                
-              </div>
-            </div>
-          </nav>
-        <section class="container">
-          <div class="row">
-            <div class="col-12 text-right " id="cabecalho">
-              Abrir <span class="chamado mr-5">Chamado</span>
-              
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="#" data-toggle="tooltip" data-placement="top" title="Sair"><i class="fas fa-door-open btn-sair"></i><span class="sr-only">(Página atual)</span></a>  
             </div>
           </div>
-      
+        </nav>
+
+        <section class="container">
 
           <div class="row">
-            <div class=" col-xs-10 col-sm-12 col-md-9 col-lg-7 col-xl-8 mx-auto">
+            <div class="col-xs-10 col-sm-12 col-md-9 col-lg-7 col-xl-8 mx-auto">
               <form id="formulario">
                 
                 <div class="form-group">
-                  <label for="tipoInp" class="azul-escuro negrito">Tipo:</label>
+                  <label for="tipoInp">Tipo:</label>
                   <select class="form-control" id="tipoInp">
-                  <option selected> - Escolha o tipo do chamado - </option>
+                  <option selected>Escolha o tipo do chamado</option>
                   <option value="1">Um</option>
                   <option value="2">Dois</option>
                   <option value="3">Três</option>
@@ -112,32 +113,32 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="servicoInp" class="azul-escuro negrito">Serviço:</label>
+                  <label for="servicoInp">Serviço:</label>
                   <select class="form-control" id="servicoInp">
-                    <option selected> - Selecione o serviço desejado - </option>
+                    <option selected>Selecione o serviço desejado</option>
                     <option value="1">Um</option>
                     <option value="2">Dois</option>
                     <option value="3">Três</option>
                   </select>
-                  <small id="emailHelp" class="form-text text-muted">Insira o serviço que esta melhor relacionado com o seu chamado</small>
+                  <small id="emailHelp" class="form-text text-muted">Insira o serviço que está melhor relacionado com o seu chamado</small>
                 </div>
 
                 <div class="form-group">
-                  <label for="tituloInp" class="azul-escuro negrito">Título:</label>
+                  <label for="tituloInp">Título:</label>
                     <div>
                       <input type="text" class="form-control" id="tituloInp">
-                      <small id="emailHelp" class="form-text text-muted">Insira um titulo para o chamado. Tente ser o mais objvetivo possível</small>
+                      <small id="emailHelp" class="form-text text-muted">Insira um título para o chamado. Tente ser o mais objetivo possível</small>
                     </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="descricaoInp" class="azul-escuro negrito">Descrição:</label>
+                  <label for="descricaoInp">Descrição:</label>
                   <textarea class="form-control" id="descricaoInp" style="resize: none" rows="4"></textarea>
                   <small id="emailHelp" class="form-text text-muted">Descreva o motivo da abertura desse chamado com o máximo de detalhes possível</small>
                 </div>
 
                 <div class="form-group">
-                    <label for="descricaoInp" class="azul-escuro negrito">Anexo:</label>
+                    <label for="descricaoInp">Anexo:</label>
                   <div class="input-group">
 
                     <input type="text" class="form-control" placeholder="Nenhum arquivo selecionado" disabled readonly>
@@ -151,7 +152,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="telefoneInp" class="azul-escuro negrito">Telefone Alternativo:</label>
+                  <label for="telefoneInp">Telefone Alternativo:</label>
                   <div>
                     <input type="text" class="form-control" id="telefoneInp">
                   </div>
@@ -177,24 +178,28 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+
     <!-- Popper.JS -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
       integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
       crossorigin="anonymous"
     ></script>
+
     <!-- Bootstrap JS -->
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
       integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
       crossorigin="anonymous"
     ></script>
+
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script>
-        $(document).ready(function(){
-          $('[data-toggle="tooltip"]').tooltip(); 
-        });
-        </script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+      });
+    </script>
+
   </body>
 </html>
