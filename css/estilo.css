@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-image: url("../img/background2.svg");
 
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@ body {
 
 /* Tipografia */
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.1em;
   font-weight: 300;
   line-height: 1.7em;
@@ -19,14 +19,14 @@ p {
   text-transform: uppercase;
   font-size: 35px;
   color: #3f51b5;
-  margin-left: 540px;
+  padding-right: 10%;
 }
 
 #cabecalho .chamado {
   color: #ff522c;
   font-weight: 700;
   margin-bottom: 50px;
-  margin-right: 5px;
+
   padding-bottom: 50px;
 }
 
@@ -100,6 +100,11 @@ a:focus {
   background: #3f51b5;
 }
 
+#content .header {
+  background-color: rgb(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
 #sidebar #logotipo {
   width: 100%;
   max-width: 200px;
@@ -116,6 +121,19 @@ a:focus {
     rgba(255, 255, 255, 0),
     rgba(255, 255, 255, 0.25),
     rgba(255, 255, 255, 0)
+  );
+}
+
+#content hr {
+  border: 0;
+  height: 1px;
+  margin: auto;
+
+  background-image: linear-gradient(
+    to right,
+    rgba(1, 1, 1, 0),
+    rgba(1, 1, 1, 0.1),
+    rgba(1, 1, 1, 0.5)
   );
 }
 
@@ -139,7 +157,7 @@ a:focus {
 
 /* Area Chamados*/
 #sidebar #aberto {
-  margin-right: 7px; 
+  margin-right: 7px;
 }
 
 #sidebar .svg-icon {
@@ -187,14 +205,6 @@ a[data-toggle="collapse"] {
 /* Barra de Navegação Topo */
 img #division {
   max-width: 10px;
-}
-
-#navbar-horizontal {
-  background-color: rgb(255, 255, 255, 0.2);
-  margin-bottom: 20px;
-  max-width: 100%;
-  padding: 25px;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 #sidebar #logo-navhr {
@@ -281,6 +291,10 @@ img #division {
   color: #fff;
   font-weight: 700px;
 }
+#content .logo-horizontal {
+  width: 100%;
+  max-width: 100px;
+}
 
 /* Media Queries - Responsividade */
 
@@ -292,12 +306,11 @@ img #division {
   }
 
   #cabecalho {
-    margin-left: 160px;
     font-size: 25px;
   }
 
-  #navbar-horizontal {
-    padding: 10px;
+  #content .header {
+    display: none;
   }
 }
 
@@ -308,19 +321,30 @@ img #division {
     display: none;
   }
 
-    #sidebar #logo-navhr {
+  #sidebar #logo-navhr {
     width: 100%;
     max-width: 50px;
     margin-left: 6px;
   }
 
-  #cabecalho {
-    margin-left: 240px;
+  #content .header {
+    display: none;
+  }
+
+  #content .header {
+    display: none;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* Medium devices (tablets, 768px and up)*/
+  #sidebar,
+  .sidebar-fake {
+    display: none;
+  }
+
+  #content .header {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
